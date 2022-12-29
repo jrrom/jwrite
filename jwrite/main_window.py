@@ -99,7 +99,7 @@ class MainWindow():
   @Slot()
   def save(self):
     # If file is untitled then do not proceed, else proceed
-    if self.file_path or self.window.windowTitle() != "Untitled*":
+    if self.file_path or self.window.windowTitle().strip() != "Untitled*":
       # Exception handling
       try:
         # To write to file
