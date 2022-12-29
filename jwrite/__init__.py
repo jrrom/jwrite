@@ -3,7 +3,7 @@ import sys
 from PySide6.QtWidgets import QApplication
 from PySide6.QtCore    import QCoreApplication, Qt
 # To import main window class
-from main_window       import MainWindow 
+from .main_window       import MainWindow 
  
 # Starting point of program 
 def main(): 
