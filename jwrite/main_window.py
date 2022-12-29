@@ -1,13 +1,15 @@
 import sys
+import os
 # PySide6 imports
 from PySide6.QtUiTools import QUiLoader 
 from PySide6.QtCore    import Slot
 from PySide6.QtWidgets import QFileDialog
 # To import components
-from about import About
-from error import Error
+from .about import About
+from .error import Error
 # To load QUi files used by PySide6
 loader = QUiLoader()
+dir_name = os.path.dirname(os.path.realpath(__file__))
 
 # Main window class to wrap MainWindow.ui
 class MainWindow():
@@ -18,10 +20,10 @@ class MainWindow():
     # Cross platform support for different file path types
     # Windows
     if sys.platform == "win32":
-      self.window = loader.load("jwrite\\views\\MainWindow.ui")
+      self.window = loader.load(dir_name + "\\jwrite\\views\\MainWindow.ui")
     # Linux
     else:
-      self.window = loader.load("jwrite/views/MainWindow.ui", None)
+      self.window = loader.load(dir_name + "/jwrite/views/MainWindow.ui", None)
 
     # To connect GUI to Python functions, see corresponding class 
     # methods for more information
