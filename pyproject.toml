@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "jwrite"
-version = "1.0.0"
+version = "1.0.1"
 description = "Notepad clone made with PySide6"
 authors = ["jrrom"]
 readme = "README.md"
@@ -9,7 +9,7 @@ repository = "https://github.com/jrrom/jwrite"
 keywords = ["PySide6", "GUI", "text", "editor"]
 
 [tool.poetry.scripts]
-jwrite = jwrite:main
+jwrite = "jwrite:main"
 
 [tool.poetry.dependencies]
 python = "<3.12,>=3.7"
