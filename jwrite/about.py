@@ -14,10 +14,10 @@ class About():
     # Cross platform support for different file path types
     # Windows
     if sys.platform == "win32":
-      self.window = loader.load(dir_name + "\\jwrite\\views\\About.ui")
+      self.window = loader.load(dir_name + "\\views\\About.ui")
     # Linux and others
     else:
-      self.window = loader.load(dir_name + "/jwrite/views/About.ui", None)
+      self.window = loader.load(dir_name + "/views/About.ui", None)
 
   # Function that can be called by the GUI
   @Slot()

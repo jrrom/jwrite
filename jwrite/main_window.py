@@ -20,10 +20,10 @@ class MainWindow():
     # Cross platform support for different file path types
     # Windows
     if sys.platform == "win32":
-      self.window = loader.load(dir_name + "\\jwrite\\views\\MainWindow.ui")
+      self.window = loader.load(dir_name + "\\views\\MainWindow.ui")
     # Linux
     else:
-      self.window = loader.load(dir_name + "/jwrite/views/MainWindow.ui", None)
+      self.window = loader.load(dir_name + "/views/MainWindow.ui", None)
 
     # To connect GUI to Python functions, see corresponding class 
     # methods for more information

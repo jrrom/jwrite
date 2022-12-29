@@ -14,10 +14,10 @@ class Error():
     # Cross platform support for different file path types
     # Windows
     if sys.platform == "win32":
-      self.window = loader.load(dir_name + "\\jwrite\\views\\Error.ui")
+      self.window = loader.load(dir_name + "\\views\\Error.ui")
     # Linux and others
     else:
-      self.window = loader.load(dir_name + "/jwrite/views/Error.ui", None)
+      self.window = loader.load(dir_name + "/views/Error.ui", None)
     # To save error to be displayed
     self.exception = exception
     # To display error
