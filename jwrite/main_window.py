@@ -68,6 +68,7 @@ class MainWindow():
   def new(self):
     self.window.setWindowTitle("Untitled*")
     self.window.textEdit.clear()
+    self.file_path = None
 
   # To open a new file
   @Slot()
@@ -99,7 +100,7 @@ class MainWindow():
   @Slot()
   def save(self):
     # If file is untitled then do not proceed, else proceed
-    if self.file_path or self.window.windowTitle().strip() != "Untitled*":
+    if self.file_path and self.window.windowTitle().strip() != "Untitled*":
       # Exception handling
       try:
         # To write to file
